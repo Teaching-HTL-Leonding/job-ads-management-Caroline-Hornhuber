@@ -1,0 +1,22 @@
+<textarea [(ngModel)]="job_title"></textarea>
+<textarea [(ngModel)]="job_description"></textarea>
+
+<button (click)="submitEdit()">Submit edit</button>
+<button (click)="deletejob()">Delte this ad</button>
+<button (click)="getBack()">See all</button>
+
+<ul>
+  <li *ngFor="let jobtranslation of job_translations()">
+    <p>{{jobtranslation.language}}</p>
+    <p>{{jobtranslation.translatedText}}</p>
+    <button (click)="deleteTranslation(jobtranslation.language)">Delete this translation</button>
+  </li>
+</ul>
+
+
+<textarea [(ngModel)]="newTranslationLanguage" ></textarea>
+<textarea [(ngModel)]="newTranslation"></textarea>
+<button (click)="addTranslation()">AddTranslation</button>
+
+
+

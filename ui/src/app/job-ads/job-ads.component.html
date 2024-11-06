@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let job of jobs()">
+    <div (click)="window.location.href='/job?id='+job.id">
+      <p>{{job.title}}</p>
+      <p>{{job.textEN}}</p>
+    </div>
+  </li>
+</ul>

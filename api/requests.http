@@ -15,10 +15,10 @@ Content-Type: application/json
 
 
 ### Get a job ad by id
-GET {{host}}/ads/{{createJobAd.response.body.id}}
+GET {{host}}/ads/19
 
 ### Update job ad text
-PATCH {{host}}/ads/{{createJobAd.response.body.id}}
+PATCH {{host}}/ads/19
 Content-Type: application/json
 
 {
@@ -26,26 +26,20 @@ Content-Type: application/json
 }
 
 ### Add a translation to a job ad
-PUT {{host}}/ads/{{createJobAd.response.body.id}}/translations/DE
+PUT {{host}}/ads/20/translations/DE
 Content-Type: application/json
 
 {
   "translatedText": "German translation of the job ad"
 }
 
-### Update translation
-PUT {{host}}/ads/{{createJobAd.response.body.id}}/translations/DE
-Content-Type: application/json
 
-{
-  "translatedText": "Updated German translation of the job ad"
-}
 
 ### Delete translation
 DELETE {{host}}/ads/{{createJobAd.response.body.id}}/translations/DE
 
 ### Delete job ad
-DELETE {{host}}/ads/{{createJobAd.response.body.id}}
+DELETE {{host}}/ads/9
 
 ### Translate text
 POST {{host}}/v2/translate
@@ -60,7 +54,7 @@ Content-Type: application/json
 ### Translate directly
 POST https://api-free.deepl.com/v2/translate
 Content-Type: application/json
-Authorization: DeepL-Auth-Key {{$dotenv DEEPL_API_KEY}}
+Authorization: DeepL-Auth-Key
 
 {
   "text": [
